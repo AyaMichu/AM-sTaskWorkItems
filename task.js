@@ -29,9 +29,10 @@ function fetchSheet(range) {
 }
 
 function login() {
-  console.log("入力ID:", id);
   const id = document.getElementById("userId").value.trim();
   const match = users.find(row => row[1].trim() === id.trim());
+  console.log("入力ID:", id);
+  
   if (match) {
     const name = match[2];
     location.href = `home.html?userId=${encodeURIComponent(id)}&userName=${encodeURIComponent(name)}`;
