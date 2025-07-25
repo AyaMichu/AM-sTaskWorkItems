@@ -1,4 +1,4 @@
-const GAS_BASE_URL = "https://script.google.com/macros/s/AKfycbz7nmN4l_dEjVexTM9QAOe4QWUee2FCsxvAGcv5hRmWFPuEd4BBTLH8Oof-ys5yBs6b/exec";
+const GAS_BASE_URL = "https://script.google.com/macros/s/AKfycbzfRqQ9IuRMT5FuKLNM-_WHchaWtkploYEGKjX3DuSQ_GJ__TiwmJTIfrSSZzN92iKt/exec";
 
 let users = [];
 let tasks = [];
