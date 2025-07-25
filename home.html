@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <title>ホーム</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    // タイトルをユーザー名に差し替え
+    const params = new URL(location.href).searchParams;
+    const userName = params.get("userName") || "ゲスト";
+    document.title = `${userName}さんのホーム`;
+  </script>
 </head>
 <body>
   <h1 id="welcome"></h1>
@@ -18,7 +24,9 @@
     <p id="assigned-count"></p>
   </section>
 
-  <a id="listLink">一覧を見る</a>
+  <a id="listLink" href="#">一覧を見る</a>　
+  <br><br>
+  <a href="index.html">← ログイン画面に戻る</a>
 
   <script src="task.js"></script>
 </body>
