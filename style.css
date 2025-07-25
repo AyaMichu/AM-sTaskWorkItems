@@ -1,18 +1,60 @@
+/* 共通スタイル（フォント・余白など） */
 body {
   font-family: 'Yu Gothic', sans-serif;
+  margin: 0;
   padding: 20px;
 }
-h1, h2 {
-  color: #2c3e50;
-}
+
+/* テーブル整形 */
 table {
   border-collapse: collapse;
   width: 100%;
+  font-size: 14px;
 }
 th, td {
-  border: 1px solid #aaa;
+  border: 1px solid #ccc;
   padding: 8px;
+  text-align: left;
 }
-.error-message {
+
+/* ローディング表示やエラーメッセージ */
+#error, .error-message {
   color: red;
+}
+
+/* 📱 スマホ用（背景：薄い黄緑） */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: #e6f7d9; /* 明るい黄緑 */
+  }
+  h1, h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  table {
+    font-size: 12px;
+  }
+  .progress-bar {
+    width: 100%;
+  }
+}
+
+/* 💻 パソコン用（背景：薄いピンク） */
+@media screen and (min-width: 601px) {
+  body {
+    background-color: #ffe8f0; /* 明るいピンク */
+  }
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  table {
+    width: 80%;
+    font-size: 16px;
+  }
+  .progress-bar {
+    width: 300px;
+  }
 }
