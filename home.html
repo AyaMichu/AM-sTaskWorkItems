@@ -5,29 +5,27 @@
   <title>ホーム</title>
   <link rel="stylesheet" href="style.css">
   <script>
-    // タイトルをユーザー名に差し替え
     const params = new URL(location.href).searchParams;
     const userName = params.get("userName") || "ゲスト";
     document.title = `${userName}さんのホーム`;
   </script>
 </head>
 <body>
-  <h1 id="welcome"></h1>
+  <h1 id="welcome">読み込み中...</h1>
 
   <section>
     <h2>進捗バー</h2>
-    <div id="progress-bars"></div>
+    <div id="progress-bars">情報取得中...</div>
   </section>
 
   <section>
     <h2>担当件数</h2>
-    <p id="assigned-count"></p>
+    <p id="assigned-count">情報取得中...</p>
   </section>
 
-  <a id="listLink" href="#">一覧を見る</a>　
-  <br><br>
+  <a id="listLink" href="#">一覧を見る</a><br><br>
   <a href="index.html">← ログイン画面に戻る</a>
 
-  <script src="task.js"></script>
+  <script src="task.js" defer></script>
 </body>
 </html>
